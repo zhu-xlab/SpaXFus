@@ -53,7 +53,7 @@ ratio=16
 
 from SpaXFus_model import SpaXFus
 
-model =SpaXFus(4,4,8,48,2,ratio=ratio)
+model =SpaXFus(mamban=4,hrms_channels=4,lrms_channels=8,mid=48,groups=2,ratio=ratio)
 
 opt_chosed = 'adamax'
 
