@@ -53,7 +53,7 @@ ratio=2
 
 from SpaXFus_model import SpaXFus
 
-model =SpaXFus(4,2,9,96,3,ratio=ratio)
+model =SpaXFus(mamban=4,hrms_channels=2,lrms_channels=9,mid=96,groups=3,ratio=ratio)
 opt_chosed = 'adamax'
 
 filepath = "checkpoint/PolSARFus/Mamba4ever_mid96_b" + str(opt.batchSize * opt.accumulation_steps) + "_" + opt_chosed + "_L1loss_lr" + str(opt.lr) + "/"
