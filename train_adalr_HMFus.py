@@ -56,7 +56,7 @@ hschannel=128
 
 from SpaXFus_model import SpaXFus
 
-model =SpaXFus(4,mschannel,hschannel,48,1)
+model =SpaXFus(mamban=4,hrms_channels=mschannel,lrms_channels=hschannel,mid=48,groups=1,ratio=ratio)
 
 opt_chosed = 'adamax'
 filepath = "checkpoint/Sen2Chikusei/Mamba4ever_multifus_smam4_mid48_b" + str(opt.batchSize * opt.accumulation_steps) + "_" + opt_chosed + "_L1loss_lr" + str(opt.lr) + "/"
