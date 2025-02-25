@@ -41,7 +41,7 @@ opt = parser.parse_args()
 print(opt)
 os.environ["CUDA_VISIBLE_DEVICES"] = opt.gpus
 
-test_set = DatasetFromHdf5("data/Sen2Chikusei_test.h5")
+test_set = DatasetFromHdf5("data/Sen2Chikusei_test.h5",False)
 name='Sen2Chikusei/PoXnet_b1_adamax_L1loss_lr0.0001'
 checkpoint = torch.load('/home/jianghe/13MambaFus/checkpoint/'+name+'/model_epoch_200.pth', map_location=torch.device('cpu'))
 
