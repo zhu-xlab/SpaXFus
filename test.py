@@ -20,20 +20,10 @@ from torch.utils.tensorboard import SummaryWriter
 sys.path.append("..")
 
 # Testing
-parser = argparse.ArgumentParser(description="PyTorch DTer")
+parser = argparse.ArgumentParser(description="PyTorch Test")
 parser.add_argument("--batchSize", type=int, default=1, help="Training batch size")
-parser.add_argument("--accumulation-steps", type=int, default=1, help="Training batch size")
-parser.add_argument("--nEpochs", type=int, default=200, help="Number of epochs to train for")
-parser.add_argument("--lr", type=float, default=0.0001, help="Learning Rate. Default=0.1")
-parser.add_argument("--step", type=int, default=10,help="Change the learning rate, Default: n=10")
 parser.add_argument("--cuda", action="store_true", default=True, help="Use cuda?")
-parser.add_argument("--resume", default=r"", type=str, help="Path to checkpoint (default: none)")
-parser.add_argument("--start-epoch", default=1, type=int, help="Manual epoch number (useful on restarts)")
-parser.add_argument("--clip", type=float, default=0.1, help="Clipping Gradients. Default=0.4")
 parser.add_argument("--threads", type=int, default=1, help="Number of threads for data loader to use, Default: 1")
-parser.add_argument("--momentum", default=0.9, type=float, help="Momentum, Default: 0.9")
-parser.add_argument("--weight-decay", "--wd", default=1e-4, type=float, help="Weight decay, Default: 1e-4")
-parser.add_argument('--pretrained', default='', type=str, help='path to pretrained model (default: none)')
 parser.add_argument("--gpus", default="8", type=str, help="gpu ids (default: 0)")
 
 #main fuction
@@ -119,6 +109,7 @@ model.eval()
 
 with torch.no_grad():
     validate(test_data_loader, model)
+
 
 
 
