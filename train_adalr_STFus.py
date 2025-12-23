@@ -20,7 +20,7 @@ from torch.utils.tensorboard import SummaryWriter
 sys.path.append("..")
 
 # Training
-parser = argparse.ArgumentParser(description="PyTorch DTer")
+parser = argparse.ArgumentParser(description="PyTorch SpaXFus")
 parser.add_argument("--batchSize", type=int, default=1, help="Training batch size")
 parser.add_argument("--accumulation-steps", type=int, default=1, help="Training batch size")
 parser.add_argument("--nEpochs", type=int, default=200, help="Number of epochs to train for")
@@ -315,6 +315,7 @@ for file in files_to_delete:
         os.remove(file)
     except FileNotFoundError:
         print(f"{file} not found or already deleted.")
+
 
 
 
