@@ -96,7 +96,7 @@ def validate(val_loader, model):
             losses_sam.update(sam.data)
             losses_ergas.update(ergars.data)
 
-            imagepath='/home/jianghe/13MambaFus/tiffoutput/'+name+'/'
+            imagepath='output/'+name+'/'
             if not os.path.exists(imagepath):
                 os.makedirs(imagepath)
 
@@ -119,6 +119,7 @@ model.eval()
 
 with torch.no_grad():
     validate(test_data_loader, model)
+
 
 
 
